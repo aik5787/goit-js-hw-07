@@ -28,9 +28,9 @@ function onClick(evt) {
     evt.preventDefault();
 
     
-    if (!evt.target.classList.contains('gallery__image')) {
-        return
-    }
+   if (!evt.target.classList.contains('gallery__image') && !evt.target.classList.contains('gallery__link') && !evt.target.classList.contains('gallery__imagegallery__item')) {
+    return;
+}
 
     const imageSource = evt.target.dataset.source;
 
@@ -52,4 +52,5 @@ function onClick(evt) {
 }    }
     
 }
+
 
